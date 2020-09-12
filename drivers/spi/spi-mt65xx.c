@@ -453,7 +453,7 @@ static void mtk_spi_prepare_transfer(struct spi_master *master,
 		cs_idletime = cs_time;
 	}
 	if (mdata->dev_comp->enhance_timing) {
-	        reg_val = (((sck_time - 1) & 0xffff)
+		reg_val = (((sck_time - 1) & 0xffff)
 			   << SPI_CFG2_SCK_HIGH_OFFSET);
 		reg_val |= (((sck_time - 1) & 0xffff)
 			   << SPI_CFG2_SCK_LOW_OFFSET);
